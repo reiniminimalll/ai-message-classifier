@@ -33,3 +33,5 @@ Sorting 100 messages by hand takes about 30 minutes; this takes about 2 minutes.
 
 ## Tools
 Python, SQLite, Flask, Gemini API, Google Colab
+
+69% → 94% on the tuned set, 10/10 on the fresh set, and the small-sample caveat
