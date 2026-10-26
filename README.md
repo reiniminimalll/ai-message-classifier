@@ -12,10 +12,11 @@ Support messages arrive in Mongolian and English and are sorted by hand, which i
 - Includes a small agent that looks up order status through tool calling
 
 ## Testing
-- 16 labeled test messages, including Mongolian, empty input, gibberish, and a prompt-injection attempt
-- Accuracy: first prompt 69% → 69% → 94% on the tuned set, 10/10 on the fresh set, and the small-sample caveat
-- Agent checks: unknown order ID, refund request, off-topic question
-
+- **Tuned set:** 16 labeled messages (Mongolian and English, plus empty input, gibberish, and a prompt-injection attempt). Accuracy rose from 69% to 94% (15/16) after improving the prompt.
+- **Fresh set:** 10 new messages not used for tuning, scored 10/10.
+- **Remaining miss:** "I was charged for an order that never arrived" was labeled billing and the model said shipping. Both answers are defensible.
+- **Caveat:** I tuned the prompt on the first set, so 94% is optimistic, and both sets are small. A production system would need hundreds of real messages.
+- **Agent checks:** an unknown order ID returned "not found" without inventing a status, a refund request was declined with no promise made, and a valid order returned the correct status and date.
 ## Safety
 - API key stored in Colab Secrets, never in code
 - Webhook input validated and length-capped
