@@ -27,7 +27,7 @@ Support messages arrive in Mongolian and English and are sorted by hand, which i
 Sorting 100 messages by hand takes about 30 minutes; this takes about 2 minutes.
 
 ## Limitations
-- Small test set (16 messages)
+- Small test sets (16 + 10 messages)
 - Webhook runs only inside the notebook
 - Free-tier rate limits
 
