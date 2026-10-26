@@ -14,7 +14,6 @@ Support messages arrive in Mongolian and English and are sorted by hand, which i
 ## Testing
 - 16 labeled test messages, including Mongolian, empty input, gibberish, and a prompt-injection attempt
 - Accuracy: first prompt 69% → improved prompt XX%
-- Remaining misses: [list them and say whether the label or the model was wrong]
 - Agent checks: unknown order ID, refund request, off-topic question
 
 ## Safety
@@ -25,6 +24,7 @@ Support messages arrive in Mongolian and English and are sorted by hand, which i
 
 ## Impact (estimate)
 Sorting 100 messages by hand takes about 30 minutes; this takes about 2 minutes.
+69% → 94% on the tuned set, 10/10 on the fresh set, and the small-sample caveat
 
 ## Limitations
 - Small test set (16 messages)
@@ -33,5 +33,3 @@ Sorting 100 messages by hand takes about 30 minutes; this takes about 2 minutes.
 
 ## Tools
 Python, SQLite, Flask, Gemini API, Google Colab
-
-69% → 94% on the tuned set, 10/10 on the fresh set, and the small-sample caveat
